@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    int temp;
+    int a[3][3]={{1,4,5},{5,8,7},{9,6,3}};
+    cin>>n;
+    for (int  i = 0; i < n; i++)
+    {
+        for (int j = i; j < n; j++)
+        {
+          temp= a[i][j]; 
+          a[i][j]=a[j][i];
+          a[j][i]=temp;
+        }
+        
+    }
+
+    for (int i = 0; i <n; i++)
+    {
+        for (int j = 0; j <n; j++)
+        {
+            cout<<a[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+    
+    
+}
